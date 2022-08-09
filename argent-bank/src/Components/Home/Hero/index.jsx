@@ -1,3 +1,8 @@
+/**
+ * 
+ * @function Feature
+ * @returns  template a component block belonging to the home page
+ */
 export default function Hero() {
       return (
             <div className="hero">

@@ -1,25 +1,41 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import reportWebVitals from './reportWebVitals';
+
 import './App.css';
 import './index.css';
+
 import Header from './Components/Layout/Header';
 import Footer from './Components/Layout/Footer';
 import Home from './Pages/Home';
-import reportWebVitals from './reportWebVitals';
-import Login from './Components/Login';
+import Login from './Pages/Login';
+import Error from './Pages/Error';
+
+import { Provider } from 'react-redux';
+import { store } from './Store';
+import Profil from './Pages/Profil';
+
+/**
+ * @const root added the store to the provider
+ */
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
       <React.StrictMode>
-            <BrowserRouter>
-                  <Header />
-                  <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/Login" element={<Login />} />
-                  </Routes>
-                  <Footer />
-            </BrowserRouter>
+            <Provider store={store}>
+                  <BrowserRouter>
+                        <Header />
+                        <Routes>
+                              <Route path="/" element={<Home />} />
+                              <Route path="/login" element={<Login />} />
+                              <Route path="/profile" element={<Profil />} />
+                              <Route path="/404" element={<Error />} />
+                              <Route path="*" element={<Error />} />
+                        </Routes>
+                        <Footer />
+                  </BrowserRouter>
+            </Provider>
       </React.StrictMode>
 );
 

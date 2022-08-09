@@ -1,3 +1,9 @@
+/**
+ * 
+ * @function Footer
+ * @returns  footer template
+*/
+
 export default function Footer() {
       return (
             <footer className="footer">
