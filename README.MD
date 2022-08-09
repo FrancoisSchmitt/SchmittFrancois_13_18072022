@@ -1,4 +1,4 @@
-# Project 12 - Sportsee
+# Project 12 - Argent-Bank
 
 This repo contains all the source code to run website and the micro API for a bank user account.
 
