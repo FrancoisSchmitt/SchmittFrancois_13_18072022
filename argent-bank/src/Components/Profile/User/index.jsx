@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getFirstName, getLastName } from '../../../Store';
-import { editUserProfil, userProfil } from '../../../Actions';
+import { editUserProfil, userProfil } from '../../../Service';
 import './index.css';
 import { useNavigate } from 'react-router-dom';
 
 /**
- * 
+ *
  * @function User
  * @returns  template a component block belonging to the Profil page
  * @function handleClick set the status to true to open the firstname/firstname modification form
@@ -25,15 +25,15 @@ export default function User() {
       const token = useSelector((state) => state?.token?.value);
       const firstName = useSelector((state) => state?.firstName?.value);
       const lastName = useSelector((state) => state?.lastName?.value);
-      
+
       useEffect(() => {
             const user = userProfil(token);
-            user.then(obj => {
+            user.then((obj) => {
                   dispatch(getFirstName(obj?.firstName));
                   dispatch(getLastName(obj?.lastName));
             });
             if (token === '') {
-                  Navigate("/404")
+                  Navigate('/404');
             }
       }, []);
 

@@ -2,7 +2,7 @@ import Log from '../../Components/Login';
 import '../../App.css';
 
 /**
- * 
+ *
  * @function Home
  * @returns  import template of the Login page to the website
  */

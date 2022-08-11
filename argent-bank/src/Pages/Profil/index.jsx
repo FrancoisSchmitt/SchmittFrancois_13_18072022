@@ -2,9 +2,8 @@ import User from '../../Components/Profile/User';
 import Transaction from '../../Components/Profile/Transaction';
 import '../../App.css';
 
-
 /**
- * 
+ *
  * @function Profil
  * @returns  import template of the Profil page to the website
  */

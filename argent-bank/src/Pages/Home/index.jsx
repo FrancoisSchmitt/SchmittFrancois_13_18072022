@@ -7,7 +7,7 @@ import Security from '../../Assets/icon-security.png';
 import '../../App.css';
 
 /**
- * 
+ *
  * @function Home
  * @returns import template of the main page to the website
  */

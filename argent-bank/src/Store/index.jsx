@@ -1,10 +1,10 @@
 import { createSlice, configureStore } from '@reduxjs/toolkit';
 
 /**
- * @const TokenSlice is the creation of the state to store the token By default it is set to ''. 
- * @const firstNameSlice is the creation of the state to store the FirstName By default it is set to ''. 
- * @const lastNameSlice is the creation of the state to store the LastName By default it is set to ''. 
- * 
+ * @const TokenSlice is the creation of the state to store the token By default it is set to ''.
+ * @const firstNameSlice is the creation of the state to store the FirstName By default it is set to ''.
+ * @const lastNameSlice is the creation of the state to store the LastName By default it is set to ''.
+ *
  * @const store is taken all the reducers of the Slices
  */
 

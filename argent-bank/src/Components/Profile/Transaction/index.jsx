@@ -1,5 +1,5 @@
 /**
- * 
+ *
  * @function Transaction
  * @returns  template a component block belonging to the Profil page
  */

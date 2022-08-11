@@ -1,14 +1,14 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getToken } from '../../Store';
-import { postLogin } from '../../Actions';
+import { postLogin } from '../../Service';
 import { useState, useEffect } from 'react';
+import './index.css'
 import { createPath, useNavigate } from 'react-router-dom';
 import 'font-awesome/css/font-awesome.min.css';
 
-
 /**
- * 
+ *
  * @function Login
  * @returns  template a component block belonging to the home page
  */
@@ -20,8 +20,10 @@ export default function Login() {
       const [email, setEmail] = useState('');
       const [password, setPassword] = useState('');
       const [status, setStatus] = useState('');
+      const [loginErreur, setLoginErreur] = useState('');
 
       const tokenSelector = useSelector((state) => state.token.value);
+
 
       const handleSubmit = (event) => {
             event.preventDefault();
@@ -30,9 +32,15 @@ export default function Login() {
                   if (results.status !== 400) {
                         setStatus(results.status);
                         newToken(results.token);
+                        console.log(results.message);
+                  } else {
+                        console.log(results.message);
+                        setLoginErreur(results.message);
                   }
             });
       };
+
+
 
       const newToken = (newToken) => {
             dispatch(getToken(newToken));
@@ -43,7 +51,6 @@ export default function Login() {
                   Navigate('/profile');
             }
       }, [tokenSelector, status]);
-
       return (
             <main className="bg-dark">
                   <section className="sign-in-content">
@@ -76,6 +83,7 @@ export default function Login() {
                                           Remember me
                                     </label>
                               </div>
+                              <small className='sing-in-error'>{loginErreur}</small>
                               <button className="sign-in-button">
                                     Sign In
                               </button>

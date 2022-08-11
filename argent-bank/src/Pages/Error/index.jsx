@@ -1,5 +1,5 @@
 /**
- * 
+ *
  * @function Error
  * @returns Template of Error Page 404
  */

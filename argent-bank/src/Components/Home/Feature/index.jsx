@@ -1,5 +1,5 @@
 /**
- * 
+ *
  * @function Feature
  * @returns  template a component block belonging to the home page
  */

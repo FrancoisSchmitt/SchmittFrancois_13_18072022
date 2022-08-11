@@ -6,8 +6,8 @@ import 'font-awesome/css/font-awesome.min.css';
 /**
  * @function Header
  * @returns footer template
- * @returns If token.lenght is different from 0 then it changes the navigation with the addition of the logout button and the name of the connected user 
- * @function handleClick If the user is logged in and clicks on the logout button the user will be logged out 
+ * @returns If token.lenght is different from 0 then it changes the navigation with the addition of the logout button and the name of the connected user
+ * @function handleClick If the user is logged in and clicks on the logout button the user will be logged out
  */
 export default function Header() {
       const token = useSelector((state) => state.token.value);
@@ -54,7 +54,7 @@ export default function Header() {
                               <div>
                                     <NavLink
                                           className="main-nav-item"
-                                                to="/profile"
+                                          to="/profile"
                                     >
                                           <i className="fa fa-user-circle"></i>
                                           {firstName}
