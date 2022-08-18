@@ -1,3 +1,6 @@
+import './index.css';
+import { NavLink } from 'react-router-dom';
+
 /**
  *
  * @function Error
@@ -5,5 +8,15 @@
  */
 
 export default function Error() {
-      return <div>404 not found</div>;
+      return (
+            <main className="main bg-dark">
+                  <h1 className="Error-type">404</h1>
+                  <h3 className="Error-desc">
+                        Cette page n'existe pas veuillez vous rendre sur la{' '}
+                        <NavLink className="Error-link" to="/">
+                              page d'accueil
+                        </NavLink>
+                  </h3>
+            </main>
+      );
 }

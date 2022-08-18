@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getToken } from '../../Store';
 import { postLogin } from '../../Service';
 import { useState, useEffect } from 'react';
-import './index.css'
+import './index.css';
 import { createPath, useNavigate } from 'react-router-dom';
 import 'font-awesome/css/font-awesome.min.css';
 
@@ -24,7 +24,6 @@ export default function Login() {
 
       const tokenSelector = useSelector((state) => state.token.value);
 
-
       const handleSubmit = (event) => {
             event.preventDefault();
             const log = postLogin({ email: email, password: password });
@@ -39,8 +38,6 @@ export default function Login() {
                   }
             });
       };
-
-
 
       const newToken = (newToken) => {
             dispatch(getToken(newToken));
@@ -83,7 +80,9 @@ export default function Login() {
                                           Remember me
                                     </label>
                               </div>
-                              <small className='sing-in-error'>{loginErreur}</small>
+                              <small className="sing-in-error">
+                                    {loginErreur}
+                              </small>
                               <button className="sign-in-button">
                                     Sign In
                               </button>

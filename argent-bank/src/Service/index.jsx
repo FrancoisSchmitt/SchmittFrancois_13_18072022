@@ -13,15 +13,11 @@ export const postLogin = async (user) => {
       try {
             const BASE_URL_API = 'http://localhost:3001/api/v1/user/login';
 
-            const data = await axios.post(
-                  BASE_URL_API,
-                  JSON.stringify(user),
-                  {
-                        headers: {
-                              'Content-Type': 'application/json',
-                        },
-                  }
-            );
+            const data = await axios.post(BASE_URL_API, JSON.stringify(user), {
+                  headers: {
+                        'Content-Type': 'application/json',
+                  },
+            });
             if (data.status !== 400) {
                   const newResultResponse = {
                         status: data.data.status,

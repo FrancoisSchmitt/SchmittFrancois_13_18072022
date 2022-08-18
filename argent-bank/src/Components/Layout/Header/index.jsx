@@ -65,7 +65,7 @@ export default function Header() {
                                           onClick={handleClick}
                                     >
                                           <i className="fa fa-sign-out"></i>
-                                          sign Out
+                                          Sign Out
                                     </NavLink>
                               </div>
                         </nav>

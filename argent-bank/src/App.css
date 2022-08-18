@@ -105,6 +105,12 @@ main {
       font-size: 0.9rem;
 }
 
+.fa.fa-user-circle,
+.fa.fa-sign-out,
+fa.fa-user-circle {
+      margin-right: 0.2rem;
+}
+
 @media (min-width: 920px) {
       .hero {
             height: 400px;

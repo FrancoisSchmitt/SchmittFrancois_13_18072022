@@ -1,0 +1,32 @@
+.Error-type,
+.Error-desc,
+.Error-link {
+      color: white;
+}
+
+.Error-type {
+      font-size: 160px;
+      font-weight: 700;
+      margin-bottom: -2%;
+      width: 75%;
+      margin-left: auto;
+      margin-right: auto;
+}
+
+.Error-desc,
+.Error-link {
+      font-size: 45px;
+      /* margin-top: -5%; */
+      font-weight: 500;
+      width: 75%;
+      margin-left: auto;
+      margin-right: auto;
+}
+
+.Error-link {
+      text-decoration: none;
+}
+
+.Error-link:hover {
+      text-decoration: underline;
+}
